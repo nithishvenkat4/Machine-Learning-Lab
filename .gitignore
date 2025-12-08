@@ -1,1 +1,8 @@
-EX-3/NFL Play by Play 2009-2016 (v3).csv 
+*.csv
+*.zip
+*.json
+*.h5
+*.pickle
+EX-3/
+data/
+dataset/
