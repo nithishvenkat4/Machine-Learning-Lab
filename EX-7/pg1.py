@@ -26,14 +26,16 @@ plt.show()
 plt.scatter(data["Weight"],data["CO2"])
 plt.show()
 
-X = data[["Volume", "Weight"]]
-X = sm.add_constant(X)
+X = data[["Volume","Weight"]]
+X=sm.add_constant(X)
 
-vif = pd.DataFrame()
-vif["Feature"] = X.columns
-vif["VIF"] = [variance_inflation_factor(X.values, i)
-              for i in range(X.shape[1])]
+vif=pd.DataFrame()
+vif["Features"]=X.columns
 
+vif_valuees=[]
+for i in range(X.shape[1]):
+    vif_valuees.append(variance_inflation_factor(X.values,i))
+vif["Values"]=vif_valuees
 print(vif)
 
 X = data[["Volume", "Weight"]]
