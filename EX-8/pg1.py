@@ -34,7 +34,7 @@ X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=
 
 from sklearn.tree import DecisionTreeClassifier
 
-model = DecisionTreeClassifier(criterion="gini",max_depth=3,min_samples_leaf=15,random_state=40)
+model = DecisionTreeClassifier(criterion="gini",max_depth=4,min_samples_leaf=10,random_state=40)
 
 model.fit(X_train,y_train)
 y_pred=model.predict(X_test)
